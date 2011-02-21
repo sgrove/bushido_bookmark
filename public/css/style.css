@@ -94,9 +94,13 @@ pre, code, kbd, samp { font-family: monospace, sans-serif; }
 
 body, select, input, textarea { 
   /* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */ 
-  color: #444; 
+  color: #ddd;
   /* set your base font here, to apply evenly */
   /* font-family: Georgia, serif;  */   
+}
+
+body {
+    background-color: #0E0815;
 }
 
 /* Headers (h1,h2,etc) have no default font-size or margin,
@@ -170,8 +174,8 @@ input:invalid, textarea:invalid {
 /* These selection declarations have to be separate.
    No text-shadow: twitter.com/miketaylr/status/12228805301 
    Also: hot pink. */
-::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
-::selection { background:#FF5E99; color:#fff; text-shadow: none; } 
+::-moz-selection{ background: #B4D5FE; color:#fff; text-shadow: none; }
+::selection { background:#B4D5FE; color:#fff; text-shadow: none; } 
 
 /*  j.mp/webkit-tap-highlight-color */
 a:link { -webkit-tap-highlight-color: #FF5E99; } 
@@ -281,3 +285,185 @@ button {  width: auto; overflow: visible; }
   h2, h3{ page-break-after: avoid; }
 }
 
+#container {
+    height: 600px;
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.2, rgb(14,8,21)),
+        color-stop(0.6, rgb(79,73,86))
+    );
+    background-image: -moz-linear-gradient(
+        center bottom,
+        rgb(14,8,21) 20%,
+        rgb(79,73,86) 60%
+    );
+}
+
+#url-holder {
+    display: none;
+    position:absolute;
+    font-size: x-large;
+    color: #b992dd;
+    padding: 10px;
+    border: 3px solid #5f3970;
+    background-color: #8457ae;
+    border-radius: 16px;
+    -moz-border-radius: 16px;
+    -webkit-border-radius: 16px;
+}
+
+#url-form {
+    display:inline;
+}
+
+#url-box {
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    color: #333;
+}    
+
+.progress {
+    display:none;
+    position: absolute;
+    width: 90%;
+    padding: 20px 15px 10px;
+    height: 50px;
+    font-size: x-large;
+
+    -moz-border-radius: 16px;
+    -webkit-border-radius: 16px;
+}
+
+#progress-percent {
+    float:left;
+    margin-right: 15px;
+}
+
+#progress-overlay {
+    width:0%;
+    opacity: 0.40;
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.08, rgb(108,83,173)),
+        color-stop(0.54, rgb(66,43,112))
+    );
+    background-image: -moz-linear-gradient(
+        center bottom,
+        rgb(108,83,173) 8%,
+        rgb(66,43,112) 54%
+    );
+
+}
+
+#progress-box {
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.05, rgb(50,50,50)),
+        color-stop(0.10, rgb(97,97,97)),
+        color-stop(0.6, rgb(200,200,200)),
+        color-stop(0.8, rgb(214,214,214)),
+        color-stop(0.9, rgb(230,230,230))
+
+    );
+    background-image: -moz-linear-gradient(
+        center bottom,
+        rgb(50,50,50) 5%,
+        rgb(97,97,97) 10%,
+        rgb(200,200,200) 60%,
+        rgb(214,214,214) 80%,
+        rgb(230,230,230) 90%
+    );
+
+    color: #333;
+}
+
+#results-box {
+    display:none;
+    position: absolute;
+    width: 50%;
+    padding: 15px;
+    height: 50px;
+    font-size: xx-large;
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.05, rgb(230,230,230)),
+        color-stop(0.10, rgb(190,190,190)),
+        color-stop(0.6, rgb(200,200,200)),
+        color-stop(1.0, rgb(214,214,214))
+     );
+    background-image: -moz-linear-gradient(
+        center bottom,
+        rgb(50,50,50) 5%,
+        rgb(97,97,97) 10%,
+        rgb(200,200,200) 60%,
+        rgb(214,214,214) 100%
+     );
+
+    -moz-border-radius: 16px;
+    -webkit-border-radius: 16px;
+}
+
+#progress-todo-list {
+    list-style: none;
+}
+
+#ajax-loader {
+    float: left;
+}
+
+#title {
+    font-size: 100px;
+    font-weight: bold;
+    color: white;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+
+    overflow:hidden;
+    clear:both;
+}
+    
+.error-message {
+    font-weight: bold;
+    color: white;
+}
+
+#bushido-webapps {
+    top: 90%;
+    margin:50px;
+    padding:0px;
+}
+
+.bushido-webapp {
+    margin: 50px;
+    padding: 25px;
+    width: 90%;
+    float:left;
+    background-color: white;
+    opacity: 1;
+    color: #333;
+
+    cursor:pointer;
+ 
+    border-radius: 21px;
+    -moz-border-radius: 21px;
+    -webkit-border-radius: 21px;
+}
+
+.bushido-webapp h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.bushido-webapp.selected {
+    width:90%;
+    opacity:100%;
+}
