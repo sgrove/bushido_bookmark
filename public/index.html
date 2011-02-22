@@ -45,9 +45,9 @@
     
     <div id="main">
       <center>
-        <h3>Click and drag the bookmark below into the toolbar for two-click deployments from github</h3>
+        <h3>Click and drag the bookmark below into the toolbar for one-click deployments from github</h3>
         <br />
-        <a style="background-color:#ccc;border-radius:5px;padding:10px;text-transform:uppercase;margin:15px;" href="javascript:(function(){var classes = 'minibutton'; if($('ul.actions li:visible:first a:first').hasClass('entice')) classes += ' entice'; var repo_url = $('#url_field').val();$('ul.actions').prepend('<li><a class=\''+classes+'\' id=\'deploy_button\' href=\'http://bushi.do/?repo='+repo_url+'\'><span>Deploy on bushi.do</span></a></li>'); $}())">Bushido Deploy!</a>
+        <a style="background-color:#ccc;border-radius:5px;padding:10px;text-transform:uppercase;margin:15px;" href="javascript:(function(){var repo_url = $('#url_field').val();window.location = 'http://bushi.do/?repo='+repo_url;}())">Bushido Deploy!</a>
       </center>
     </div>
     
